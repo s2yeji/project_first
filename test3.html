@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <script src="./3dom.js" defer></script>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .con {
+        position: relative;
+      }
+      .con .bg {
+        position: absolute;
+        width: 120px;
+        height: 60px;
+        left: 0;
+        background-color: lavenderblush;
+        border-radius: 80px;
+        transition: 0.5s;
+      }
+      ul {
+        display: flex;
+        position: relative;
+        z-index: 1;
+      }
+      ul > li {
+        margin: 5px;
+        padding: 1rem 2rem;
+        border-radius: 60px;
+        cursor: pointer;
+        list-style: none;
+      }
+      ul > li.on {
+        color: pink;
+        font-weight: bold;
+      }
+      .content > div {
+        display: none;
+        height: 250px;
+      }
+      .content > div:first-of-type {
+        display: block;
+      }
+      .content > div.on {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="con">
+      <ul class="list">
+        <li>list1</li>
+        <li>list2 list2</li>
+        <li>list3</li>
+        <li>list4 list4 list4 list4</li>
+      </ul>
+      <div class="content">
+        <div class="on">1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+      </div>
+    </div>
+    <!-- <button class="btn1">클릭!</button> -->
+  </body>
+</html>

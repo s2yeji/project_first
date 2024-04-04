@@ -1,8 +1,5 @@
 let nav = document.querySelector('nav');
 let ham = nav.querySelector('.ham');
-const btnPortfolio = nav.querySelector('.goPortfolio');
-const section = document.querySelectorAll('main > section');
-console.log(section);
 
 // ham.addEventListener('click', function () {
 //   ham.classList.toggle('open');
@@ -13,15 +10,9 @@ console.log(section);
 //   }
 // });
 
-btnPortfolio.addEventListener('click', (e) => {
-  section[3].scrollIntoView({
-    behavior: 'smooth',
-  });
-});
-
-ham.addEventListener('click', () => {
-  const isOpen = ham.classList.toggle('open'); // true, false
-  console.log(isOpen);
+// 강사수정
+ham.addEventListener('click', function () {
+  var isOpen = ham.classList.toggle('open'); // true, false
   nav.classList.toggle('on', isOpen);
   //코드설명 : isOpen이 true면 on을 추가, false면 on을 제거
 });
